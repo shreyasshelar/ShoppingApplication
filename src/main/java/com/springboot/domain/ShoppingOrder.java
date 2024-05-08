@@ -21,6 +21,8 @@ public class ShoppingOrder {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String customerName;
+	
+
 	private String itemName;
 //	@Enumerated(EnumType.STRING)
 	private ShoppingStates state;
@@ -55,6 +57,12 @@ public class ShoppingOrder {
 
 	public void setState(ShoppingStates state) {
 		this.state = state;
+	}
+	
+	@Override
+	public String toString() {
+		return "ShoppingOrder [id=" + id + ", customerName=" + customerName + ", itemName=" + itemName + ", state="
+				+ state + "]";
 	}
 
 }
