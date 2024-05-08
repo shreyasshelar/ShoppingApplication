@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Customer Information</title>
+</head>
+<body>
+    <h2>Enter Customer Information</h2>
+    <form action="/order/create" method="post">
+        <label for="customerName">Customer Name:</label><br>
+        <input type="text" id="customerName" name="customerName" th:value="${customerName}"><br><br>
+        <label for="itemName">Item Name:</label><br>
+        <input type="text" id="itemName" name="itemName" th:value="${itemName}"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
